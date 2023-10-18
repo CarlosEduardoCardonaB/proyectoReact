@@ -49,7 +49,9 @@ export const ListadoComponente = ({listadostate, setListaPeli}) => {
                 //Si se cumple esta condición se muestra el componente editar. Esto quiere decir que con el botón editar arrastro el ID del producto y lo comparo con el ID de la caja donde estoy parado
                 editar === peli.id && (
                   // <h1>FORMULARIO</h1>
-                  <EditarComponent peli={peli}/>
+                  <EditarComponent peli={peli}
+                    conseguirPeliculas={conseguirPeliculas}
+                  />
                 )
               }
 
