@@ -30,7 +30,7 @@ function App() {
 
       {/*Barra lateral*/}
       <aside className="lateral">
-         <BuscadorComponente/>
+         <BuscadorComponente listadostate={listadostate} setListaPeli={setListaPeli}/>
           <CrearComponente setListaPeli={setListaPeli}/>
       </aside>
       {/*Pie de página*/}

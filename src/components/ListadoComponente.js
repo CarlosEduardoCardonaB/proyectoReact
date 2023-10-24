@@ -3,14 +3,14 @@ import { EditarComponent } from './EditarComponent';
 
 export const ListadoComponente = ({listadostate, setListaPeli}) => {
 
-  // const [listadostate, setListaPeli] = useState([]);
+  //const [listadostate, setListaPeli] = useState([]);
 
   const [editar, setEditar] = useState(0);
 
   //Como regla de react es bueno tener los hook antes de las funciones, por esto el useEffect y e useState los colocamos aqui arriba
   useEffect(()=>{
     conseguirPeliculas();
-    console.log('Componente de lista de pelis cargado!!');
+    //console.log('Componente de lista de pelis cargado!!');
     //cuando al useEffect le asignamos el array vacío aqui abajo lo que hace es llamar los métodos en su interior
     //cuando se cargue la página
   }, []);
@@ -51,6 +51,8 @@ export const ListadoComponente = ({listadostate, setListaPeli}) => {
                   // <h1>FORMULARIO</h1>
                   <EditarComponent peli={peli}
                     conseguirPeliculas={conseguirPeliculas}
+                    setEditar = {setEditar}
+                    setlistadoState = {setListaPeli} 
                   />
                 )
               }
